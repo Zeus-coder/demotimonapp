@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import HomeScreen from '../screens/HomeScreen';
 import FavoriteScreen from '../screens/FavoriteScreen';
 import ProfileScreen from '../screens/ProfileScreen';
@@ -86,17 +86,17 @@ export default function TabNavigator() {
         }}
       />
       <Tab.Screen
-      initialParams={{screen: 'Cart'}}
+        initialParams={{screen: 'Cart'}}
         name="Cart"
         component={CartNavigator}
         options={{
-          headerShown: false, 
+          headerShown: false,
           tabBarIcon: ({focused}) => CartIcon({focused}),
           title: '',
-          headerTitle:'Cart',
-          headerTitleAlign:'center',
+          headerTitle: 'Cart',
+          headerTitleAlign: 'center',
           headerShadowVisible: false,
-          tabBarStyle: { display: 'none' },
+          tabBarStyle: {display: 'none'},
           headerLeft: () => BackButton(),
         }}
       />

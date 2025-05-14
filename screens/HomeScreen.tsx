@@ -8,8 +8,8 @@ import {ScrollView} from 'react-native';
 import {HorizontalCard} from '../components/horizontal-card';
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: '#F5F9FD', padding: 20}}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#F5F9FD'}}>
+      <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1,padding: 20}}>
         <Text style={{fontSize: 28, fontWeight: 'bold'}}>Discover</Text>
         <Text style={{fontSize: 28, fontWeight: 'bold'}}>our new items</Text>
 

@@ -24,7 +24,7 @@ const CheckOutOrder = () => {
   ];
 
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: '#F5F9FD', padding: 20}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#F5F9FD'}}>
       <ScrollView style={styles.container}>
         <View style={styles.card}>
           <Text style={styles.cardTitle}>Credit Card</Text>
@@ -99,9 +99,11 @@ const CheckOutOrder = () => {
           <Text style={styles.totalAmount}>$148.00</Text>
         </View>
       </ScrollView>
-      <TouchableOpacity style={styles.confirmButton}>
-        <Text style={styles.confirmText}>Confirm Order</Text>
-      </TouchableOpacity>
+      <View style={{padding: 20}}>
+        <TouchableOpacity style={styles.confirmButton}>
+          <Text style={styles.confirmText}>Confirm Order</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
@@ -110,7 +112,7 @@ export default CheckOutOrder;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
+    padding: 20,
     backgroundColor: '#f8f9fd',
     flex: 1,
   },

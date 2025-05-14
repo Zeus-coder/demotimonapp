@@ -3,7 +3,7 @@ import {ScrollView, Text, TouchableOpacity} from 'react-native';
 import {SafeAreaView, View} from 'react-native';
 import {ProductCard} from '../components/product-card';
 import {Input} from '../components/input';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const CartScreen = () => {
   const navigation = useNavigation<any>();
@@ -13,8 +13,10 @@ const CartScreen = () => {
   const itemCount = 3;
 
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: '#F5F9FD', padding: 20}}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#F5F9FD'}}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{flex: 1, padding: 20}}>
         <View>
           {Array(3)
             .fill(0)
@@ -93,20 +95,22 @@ const CartScreen = () => {
           </View>
         </View>
       </ScrollView>
-      <TouchableOpacity
-      onPress={() => {
-        navigation.navigate('CheckOutOrder');
-      }}
-        style={{
-          backgroundColor: '#111827',
-          paddingVertical: 18,
-          borderRadius: 14,
-          alignItems: 'center',
-        }}>
-        <Text style={{color: '#FFFFFF', fontSize: 16, fontWeight: '600'}}>
-          Proceed To Checkout
-        </Text>
-      </TouchableOpacity>
+      <View style={{padding: 20}}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('CheckOutOrder');
+          }}
+          style={{
+            backgroundColor: '#111827',
+            paddingVertical: 18,
+            borderRadius: 14,
+            alignItems: 'center',
+          }}>
+          <Text style={{color: '#FFFFFF', fontSize: 16, fontWeight: '600'}}>
+            Proceed To Checkout
+          </Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };

@@ -12,7 +12,6 @@ export const ProductCard = () => {
     <View
       style={{
         flexDirection: 'row',
-        padding: 12,
         alignItems: 'center',
         borderRadius: 12,
         margin: 10,
